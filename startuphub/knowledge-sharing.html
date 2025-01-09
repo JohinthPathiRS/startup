@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Sharing | Startup India Portal</title>
+    <link rel="stylesheet" href="knowledge-sharing.css">
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html">Startup Portal</a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="startups.html">Startups</a></li>
+        <li><a href="mentor.html">Mentors</a></li>
+        <li><a href="investors.html">Investors</a></li>
+        <li><a href="government-support.html">Government Agencies</a></li>
+        <li><a href="knowledge-sharing.html">Knowledge Sharing</a></li>
+        <li><a href="new-application.html">New Application</a></li>
+    </ul>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section knowledge-hero">
+        <div class="overlay">
+            <h1>Knowledge Sharing Hub</h1>
+            <p>Learn. Share. Grow Together.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Video Content Section -->
+        <section class="video-content">
+            <h2>Featured Knowledge Resources</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/vid1" allowfullscreen></iframe>
+                    <h3>How to Start a Startup</h3>
+                    <p>A step-by-step guide to launching your dream venture.</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/vid2" allowfullscreen></iframe>
+                    <h3>Funding 101</h3>
+                    <p>Learn how to pitch to investors and secure funding.</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/vid3" allowfullscreen></iframe>
+                    <h3>Marketing Strategies</h3>
+                    <p>Grow your brand with proven marketing techniques.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section class="articles-section">
+            <h2>Latest Articles</h2>
+            <div class="article-card">
+                <h3>Top 5 Mistakes to Avoid as a New Startup</h3>
+                <p>Launching a business can be challenging. Here are the common pitfalls you should steer clear of.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+            <div class="article-card">
+                <h3>Why Networking is the Key to Success</h3>
+                <p>Build meaningful connections to grow your startup faster.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+        </section>
+
+        <!-- Comment Section -->
+        <section class="comment-section">
+            <h2>Share Your Thoughts</h2>
+            <form id="commentForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" placeholder="Write your comment here" required></textarea>
+
+                <button type="submit" class="submit-btn">Post Comment</button>
+            </form>
+
+            <div id="commentBox">
+                <h3>Recent Comments</h3>
+                <ul id="commentsList">
+                    <!-- User comments will be appended here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Startup India Portal. All Rights Reserved.</p>
+    </footer>
+
+    <script >
+        document.getElementById('commentForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const comment = document.getElementById('comment').value;
+
+            // Add comment to the list
+            const commentList = document.getElementById('commentsList');
+            const newComment = document.createElement('li');
+            newComment.textContent = `${name}: ${comment}`;
+            commentList.appendChild(newComment);
+
+            // Clear the form
+            document.getElementById('commentForm').reset();
+        });
+        // Navbar Toggle for Mobile View
+document.querySelector('.burger').addEventListener('click', function () {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+});
+
+
+    </script>
+</body>
+</html>

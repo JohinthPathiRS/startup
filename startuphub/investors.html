@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investors | Startup India Portal</title>
+    <link rel="stylesheet" href="investors.css">
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html">Startup Portal</a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="startups.html">Startups</a></li>
+        <li><a href="mentor.html">Mentors</a></li>
+        <li><a href="investors.html">Investors</a></li>
+        <li><a href="government-support.html">Government Agencies</a></li>
+        <li><a href="knowledge-sharing.html">Knowledge Sharing</a></li>
+        <li><a href="new-application.html">New Application</a></li>
+    </ul>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section investors-hero">
+        <div class="overlay">
+            <h1>Investors</h1>
+            <p>Fueling Dreams into Reality</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Popular Investing Agencies Section -->
+        <section class="investing-agencies">
+            <h2>Popular Investment Agencies</h2>
+            <div class="agency-list">
+                <div class="agency-card">
+                    <img src="images/th (11).jpg" alt="Sequoia Capital">
+                    <h3>Sequoia Capital</h3>
+                    <p>Known for its legacy of funding transformative companies like Apple, Google, and Airbnb.</p>
+                </div>
+
+                <div class="agency-card">
+                    <img src="images/th (12).jpg" alt="Accel Partners">
+                    <h3>Accel Partners</h3>
+                    <p>Early backers of Flipkart, Facebook, and numerous groundbreaking startups worldwide.</p>
+                </div>
+
+                <div class="agency-card">
+                    <img src="images/th (13).jpg" alt="Tiger Global Management">
+                    <h3>Tiger Global Management</h3>
+                    <p>Focused on technology and internet-driven startups across various industries globally.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Idea Submission Form -->
+        <section class="idea-form-section">
+            <h2>Submit Your Startup Idea</h2>
+            <form id="ideaForm">
+                <label for="startupName">Startup Name:</label>
+                <input type="text" id="startupName" name="startupName" placeholder="Enter your startup name" required>
+
+                <label for="requiredInvestment">Required Investment (in INR):</label>
+                <input type="number" id="requiredInvestment" name="requiredInvestment" placeholder="e.g., 5000000" required>
+
+                <label for="goal">Startup Goal:</label>
+                <textarea id="goal" name="goal" placeholder="Describe your startup's goal..." required></textarea>
+
+                <label for="futureEstimation">Future Estimation:</label>
+                <textarea id="futureEstimation" name="futureEstimation" placeholder="Describe your revenue and growth estimation..." required></textarea>
+
+                <label for="marketStrategy">Market Strategy:</label>
+                <textarea id="marketStrategy" name="marketStrategy" placeholder="Outline your market strategy..." required></textarea>
+
+                <button type="submit" class="submit-btn">Submit Idea</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Startup India Portal. All Rights Reserved.</p>
+    </footer>
+
+    <script >
+        document.getElementById('ideaForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission for now
+            alert('Thank you for submitting your idea! We will review it and get back to you soon.');
+        });
+        // Navbar Toggle for Mobile View
+document.querySelector('.burger').addEventListener('click', function () {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+});
+
+
+    </script>
+</body>
+</html>

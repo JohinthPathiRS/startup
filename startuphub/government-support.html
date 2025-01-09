@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Agency Support | Startup India Portal</title>
+    <link rel="stylesheet" href="government-support.css">
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html">Startup Portal</a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="startups.html">Startups</a></li>
+        <li><a href="mentor.html">Mentors</a></li>
+        <li><a href="investors.html">Investors</a></li>
+        <li><a href="government-support.html">Government Agencies</a></li>
+        <li><a href="knowledge-sharing.html">Knowledge Sharing</a></li>
+        <li><a href="new-application.html">New Application</a></li>
+    </ul>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section government-hero">
+        <div class="overlay">
+            <h1>Government Agency Support</h1>
+            <p>Empowering Startups Through Tailored Programs</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Support Programs Section -->
+        <section class="program-list">
+            <h2>Available Support Programs</h2>
+            <ul>
+                <li><button class="program-btn" onclick="addFields('Funding Support')">Funding Support</button></li>
+                <li><button class="program-btn" onclick="addFields('Tax Benefits')">Tax Benefits</button></li>
+                <li><button class="program-btn" onclick="addFields('Incubation Centers')">Incubation Centers</button></li>
+            </ul>
+        </section>
+
+        <!-- Application Form Section -->
+        <section class="application-form-section">
+            <h2>Submit Your Application</h2>
+            <form id="applicationForm">
+                <label for="startupName">Startup Name:</label>
+                <input type="text" id="startupName" name="startupName" placeholder="Enter your startup name" required>
+
+                <label for="applicantName">Applicant Name:</label>
+                <input type="text" id="applicantName" name="applicantName" placeholder="Enter your name" required>
+
+                <label for="contact">Contact Information:</label>
+                <input type="text" id="contact" name="contact" placeholder="Phone or Email" required>
+
+                <label for="programSelected">Selected Program:</label>
+                <input type="text" id="programSelected" name="programSelected" placeholder="Select a program above" readonly>
+
+                <div id="dynamicFields"></div> <!-- Additional fields will be added here -->
+
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Startup India Portal. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

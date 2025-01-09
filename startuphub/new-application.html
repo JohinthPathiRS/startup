@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Application | Startup Incubator</title>
+    <link rel="stylesheet" href="new-application.css">
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html">Startup Portal</a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="startups.html">Startups</a></li>
+        <li><a href="mentors.html">Mentors</a></li>
+        <li><a href="investors.html">Investors</a></li>
+        <li><a href="government-support.html">Government Agencies</a></li>
+        <li><a href="knowledge-sharing.html">Knowledge Sharing</a></li>
+        <li><a href="new-application.html">New Application</a></li>
+    </ul>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section application-hero">
+        <div class="overlay">
+            <h1>Apply to the Startup Incubator</h1>
+            <p>Turn your dreams into reality with our support.</p>
+        </div>
+    </header>
+
+    <!-- Application Form Section -->
+    <main>
+        <section class="application-form-section">
+            <h2>Submit Your Application</h2>
+            <form id="applicationForm">
+                <!-- Basic Details -->
+                <h3>Basic Information</h3>
+                <label for="startupName">Startup Name:</label>
+                <input type="text" id="startupName" name="startupName" placeholder="Enter your startup's name" required>
+
+                <label for="founderName">Founder Name:</label>
+                <input type="text" id="founderName" name="founderName" placeholder="Your full name" required>
+
+                <label for="contactEmail">Contact Email:</label>
+                <input type="email" id="contactEmail" name="contactEmail" placeholder="Your email address" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your contact number" required>
+
+                <!-- Business Details -->
+                <h3>Business Details</h3>
+                <label for="ideaDescription">Describe Your Idea:</label>
+                <textarea id="ideaDescription" name="ideaDescription" placeholder="Write a brief about your startup idea" required></textarea>
+
+                <label for="investmentRequired">Investment Required (₹):</label>
+                <input type="number" id="investmentRequired" name="investmentRequired" placeholder="Enter the amount in INR" required>
+
+                <label for="businessGoals">Goals for the Next Year:</label>
+                <textarea id="businessGoals" name="businessGoals" placeholder="Describe your business goals" required></textarea>
+
+                <label for="marketEstimation">Market Estimation:</label>
+                <textarea id="marketEstimation" name="marketEstimation" placeholder="Briefly explain your market strategy and potential" required></textarea>
+
+                <!-- Dynamic Program Selection -->
+                <h3>Select Support Programs</h3>
+                <label for="programs">Choose Programs:</label>
+                <select id="programs" name="programs">
+                    <option value="mentorship">Mentorship Program</option>
+                    <option value="funding">Funding Support</option>
+                    <option value="networking">Networking Opportunities</option>
+                    <option value="workspace">Co-working Space</option>
+                </select>
+                <button type="button" id="addProgramBtn">Add Program</button>
+
+                <ul id="selectedPrograms">
+                    <!-- Dynamic List of Selected Programs -->
+                </ul>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Startup India Portal. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
